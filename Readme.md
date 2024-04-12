@@ -13,8 +13,9 @@ docker exec -it apptainer-rocky-builder /bin/bash
 ```
 
 - to just do a build:
-(not finished yet...)
-will use a build definition from xxx and build the image
+**aptcont.sif** and **aptbuild.def** are the expected output and input.
+- Create ./builds/aptbuild.def
+- sift container will be aptcont.sif when done
 ```
 docker compose -f docker-compose-builder.yml up
 ```

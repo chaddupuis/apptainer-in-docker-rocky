@@ -10,9 +10,9 @@ services:
     volumes:
        - ./builds/:/apptainer-builds/
     container_name: apptainer-rocky-builder
-    #command: bash -c "apptainer info"
-    tty: false
+    tty: true
     privileged: true
-    command: bash -c "apptainer build ...."
+    command: bash -c "cd /apptainer-builds/ && apptainer build aptcont.sif aptbuild.def"
+
 
       
