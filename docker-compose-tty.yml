@@ -3,6 +3,7 @@ version: "3.2"
 services:
 
   apptainer:
+    platform: linux/amd64
     build:
       context: './rocky/'
     image: apptainer-rocky-builder-image
@@ -11,5 +12,7 @@ services:
     container_name: apptainer-rocky-builder
     #command: bash -c "apptainer info"
     tty: true
+    privileged: true
+
 
       
