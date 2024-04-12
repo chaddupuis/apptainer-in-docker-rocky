@@ -1,0 +1,15 @@
+version: "3.2"
+
+services:
+
+  apptainer:
+    build:
+      context: './rocky/'
+    image: apptainer-rocky-builder-image
+    volumes:
+       - ./builds/:/apptainer-builds/
+    container_name: apptainer-rocky-builder
+    #command: bash -c "apptainer info"
+    tty: true
+
+      
